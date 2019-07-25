@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/xakep666/asciinema-player/pkg/asciicast"
+	"github.com/soopsio/asciinema-player/pkg/asciicast"
 )
 
 // ParseError represents parsing error

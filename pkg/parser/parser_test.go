@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/xakep666/asciinema-player/pkg/asciicast"
+	"github.com/soopsio/asciinema-player/pkg/asciicast"
 )
 
 const malformedHeaderFile = `{"blabla"}

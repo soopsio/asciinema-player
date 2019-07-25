@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/nsf/termbox-go"
-	"github.com/xakep666/asciinema-player/pkg/terminal"
+	"github.com/soopsio/asciinema-player/pkg/terminal"
 )
 
 // Player is an interface for playing asciicasts.

@@ -3,18 +3,19 @@ package main
 import (
 	"flag"
 	"fmt"
+	"log"
 	"os"
 	"time"
 
-	"github.com/xakep666/asciinema-player/pkg/asciicast"
-	"github.com/xakep666/asciinema-player/pkg/parser"
-	"github.com/xakep666/asciinema-player/pkg/terminal"
+	"github.com/soopsio/asciinema-player/pkg/asciicast"
+	"github.com/soopsio/asciinema-player/pkg/parser"
+	"github.com/soopsio/asciinema-player/pkg/terminal"
+	goterm "golang.org/x/crypto/ssh/terminal"
 )
 
 func errExit(err error) {
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		log.Fatalln(err)
 	}
 }
 
@@ -45,12 +46,17 @@ func main() {
 	parsed, err := parser.Parse(file)
 	errExit(err)
 
+	f, _ := os.Open("/dev/tty")
+	state, _ := goterm.GetState(int(f.Fd()))
+	defer goterm.Restore(int(f.Fd()), state)
+
 	term, err := terminal.NewPty()
 	errExit(err)
 	errExit(term.ToRaw())
 	defer term.Reset()
-
+	//log.Println("abcd")
 	tp := &asciicast.TerminalPlayer{Terminal: term}
+	//log.Println("efgh")
 
 	err = tp.Play(parsed, maxWait, speed)
 	errExit(err)

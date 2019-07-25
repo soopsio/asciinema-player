@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/nsf/termbox-go"
-	"github.com/xakep666/asciinema-player/pkg/terminal"
+	"github.com/soopsio/asciinema-player/pkg/terminal"
 )
 
 func TestSize(t *testing.T) {

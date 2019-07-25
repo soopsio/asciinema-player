@@ -1,4 +1,4 @@
-module github.com/xakep666/asciinema-player
+module github.com/soopsio/asciinema-player
 
 require (
 	github.com/kr/pty v1.1.2

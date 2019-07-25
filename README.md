@@ -1,8 +1,8 @@
 # asciinema-player
 [![Build Status](https://travis-ci.org/xakep666/asciinema-player.svg?branch=master)](https://travis-ci.org/xakep666/asciinema-player)
 [![codecov](https://codecov.io/gh/xakep666/asciinema-player/branch/master/graph/badge.svg)](https://codecov.io/gh/xakep666/asciinema-player)
-[![Go Report Card](https://goreportcard.com/badge/github.com/xakep666/asciinema-player)](https://goreportcard.com/report/github.com/xakep666/asciinema-player)
-[![GoDoc](https://godoc.org/github.com/xakep666/asciinema-player/pkg/asciicast?status.svg)](https://godoc.org/github.com/xakep666/asciinema-player/pkg/asciicast)
+[![Go Report Card](https://goreportcard.com/badge/github.com/soopsio/asciinema-player)](https://goreportcard.com/report/github.com/soopsio/asciinema-player)
+[![GoDoc](https://godoc.org/github.com/soopsio/asciinema-player/pkg/asciicast?status.svg)](https://godoc.org/github.com/soopsio/asciinema-player/pkg/asciicast)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 asciinema-player is a library and cli-app to play terminal sessions recorded by asciinema (http://github.com/asciinema/asciinema)
@@ -13,12 +13,12 @@ asciinema-player is a library and cli-app to play terminal sessions recorded by 
 ## Installation
 Library:
 ```bash
-go get -v -u github.com/xakep666/pkg/asciicast
+go get -v -u github.com/soopsio/pkg/asciicast
 ```
 
 App:
 ```bash
-go get -v -u github.com/xakep666/cmd/asciinema-player
+go get -v -u github.com/soopsio/cmd/asciinema-player
 ```
 
 ## Usage
